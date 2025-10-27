@@ -1,0 +1,121 @@
+
+Entrada
+Processamento
+Saída
+
+
+(React)  Front-end <-> API <-> Back-end (PHP e MySQL)
+
+Navegador
+
+Postman
+Insomnia
+
+API Rest
+
+API, cada endereço é chamado de endpoint
+https://limeiraweb.com.br/api/tarefas
+
+Create	- POST
+Read	- GET
+Update	- PUT
+Delete	- DELETE
+
+Verbos HTTP
+
+
+JSON - Formato de comunicação entre aplicações
+
+https://limeiraweb.com.br/api/tarefas/74
+
+{
+	"nome": "E o vento levou",
+	"situacao": "concluido"
+}
+
+
+
+
+TarefasApi
+
+npm install axios
+
+=============================================================
+
+App de contatos - [Atividade de avaliação]
+Gerenciar uma lista de contatos pessoais.
+Endpoint da API: [em breve]
+Nome AppContatos
+Campos: 
+- id
+- Nome
+- Whatsapp
+- E-mail
+
+Funcionalidades: 
+- Listar os contatos em ordem alfabética "com separador de letras"
+- Opção para remover um conta da lista
+	- solicitar uma confirmação de exclusão
+- Opção para alterar dados de um contato, exceto o id.
+- Formulário para inclusão dos campos acima.
+	- máscara de entrada para o Whatsapp
+	- validação para os campos email e Whatsapp (validar formato)
+
+
+
+===================================================
+Projeto Catálogo de Livros (CRUD)
+
+1 - Criar o projeto
+npm create vite@latest CatalogoLivros
+cd catalogolivros
+npm install axios bootstrap react-router-dom
+npm install
+
+index.html -> main.jsx -> App.jsx (chamar os componentes)
+
+2 - Remover códigos do projeto padrão do React
+index.css
+Redefinir o App.jsx
+
+3 - Importar o Bootstrap no main
+
+4 - Criar os componentes Menu, LivroList e LivroForm na pasta components
+
+5 - Criar o conteúdo do Menu
+6 - Definir as rotas e lógica no App.js
+7 - Criar o layout do LivroList
+8 - Criar um servidor fake para simular o backend
+npm install -g json-server
+npx json-server --watch db.json --port 5000
+
+
+9 - Criar as funcionalidades do LivroList
+10 - Criar o layout do LivroForm
+11 - Criar as funcionalidades do LivroForm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

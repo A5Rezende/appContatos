@@ -1,0 +1,44 @@
+----------------------------------------------
+Criar um projeto em React
+
+npm create vite@latest tarefas			// Criar o projeto
+cd tarefas					// entrar na pasta criada
+npm install bootstrap react-router-dom		// Atualizar as bibliotecas
+npm run dev 					// executar o projeto
+
+---------------------------------------------
+
+Git - Sistema de controle de versão 
+GitHub (https://github.com) - Plataforma de hospedagem de repositórios Git 
+
+git init - inicializar um repositório local
+git add . - incluir todos os arquivos e pastas no repositório local
+git commit -m "06/08/2025 - todos os arquivos do projeto calculadora"
+git branch -M main - forçar o uso do nome main para o repositório local
+git remote add origin https://github.com/luisribeiro1/calculadoras.git - Definir o repositório remoto
+git push -u origin main
+
+
+FINAL DE AULA
+git add .
+git commit -m "data - conteúdo da aula"
+git push
+
+
+Banco de atividades:
+https://luisribeiro1.github.io/banco-de-atividades/
+
+
+=================================================
+
+Roteiro para deploy ou publicação no GitHub Pages
+
+1 - Criar o repositório (apptarefas)
+2 - Configurar o package.json (homepage, predeploy e deploy)
+
+3 - Instalar a dependência gh-pages
+npm install --save-dev gh-pages
+4 - Subir o projeto no GitHub
+5 - Rodar o deploy: npm run deploy
+
+npm install
