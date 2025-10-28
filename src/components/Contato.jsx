@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import api from "../services/api";
+import { MaskedInput } from "react-maskara";
 
 export default function Contato() {
     const [nome, setNome] = useState("");
@@ -22,14 +23,19 @@ export default function Contato() {
 
     const salvar = async (event) => {
         event.preventDefault()
-        const dados = { nome, numero, email}
+
+        if ( nome != "" && numero != "" && email != "") {
+            const dados = { nome, numero, email}
         
-        if (id) {
-            await api.put(`/contatos/${id}`, dados)
+            if (id) {
+                await api.put(`/contatos/${id}`, dados)
+            } else {
+                await api.post("/contatos", dados)
+            }
+            navigate("/")
         } else {
-            await api.post("/contatos", dados)
+            window.alert("Está faltando dados do contato. Por favor revise")
         }
-        navigate("/")
     }
 
     return (
@@ -54,9 +60,13 @@ export default function Contato() {
                     <div className="row mb-3">
                         <div className="col-md-6">
                             <label className="form-label">Numero</label>
-                            <input
-                                type="number"
+                            <MaskedInput
+                                mask="(99) 99999-9999"
+                                id="numero"
+                                name="numero"
                                 className="form-control"
+                                type="tel"
+                                placeholder="(00) 00000-0000"
                                 value={numero}
                                 onChange={(e) => setNumero(e.target.value)}
                                 required

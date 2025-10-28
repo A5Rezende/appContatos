@@ -15,11 +15,6 @@ export default function Lista() {
         setContatos(listaOrdenada)
     }
 
-    function ordenarLista(lista) {
-        const listaOrdenada = [...lista].sort((a, b) => a.nome.localeCompare(b.nome))
-        setContatos(listaOrdenada)
-    }
-
     const deletar = async(id) => {
         if (window.confirm("Você tem certeza que deseja excluir?")) {
             await api.delete(`/contatos/${id}`)
